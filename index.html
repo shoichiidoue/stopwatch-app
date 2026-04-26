@@ -21,9 +21,27 @@
                 <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
             </div>
             <div class="buttons">
-                <button id="startBtn" class="btn btn-primary">▶ スタート</button>
-                <button id="stopBtn" class="btn btn-danger" disabled>⏹ ストップ</button>
-                <button id="resetBtn" class="btn btn-secondary">🔄 リセット</button>
+                <button id="startBtn" class="btn btn-primary">
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 70 L30 30 M40 70 L40 20 M50 70 L50 15 M60 70 L60 20 M70 70 L70 30 M20 70 Q50 75 80 70" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    スタート
+                </button>
+                <button id="stopBtn" class="btn btn-danger" disabled>
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="4" fill="none"/>
+                        <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="4"/>
+                        <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="4"/>
+                    </svg>
+                    ストップ
+                </button>
+                <button id="resetBtn" class="btn btn-secondary">
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 20 Q80 20 80 50 Q80 80 50 80 Q30 80 20 65" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                        <path d="M35 50 L50 35 L50 50" fill="currentColor"/>
+                    </svg>
+                    リセット
+                </button>
             </div>
             <div class="laps">
                 <h2>📋 ラップタイム</h2>
@@ -51,9 +69,27 @@
                 <span id="timerHoursDisplay">00</span>:<span id="timerMinutesDisplay">01</span>:<span id="timerSecondsDisplay">00</span>
             </div>
             <div class="buttons">
-                <button id="timerStartBtn" class="btn btn-primary">▶ スタート</button>
-                <button id="timerStopBtn" class="btn btn-danger" disabled>⏹ ストップ</button>
-                <button id="timerResetBtn" class="btn btn-secondary">🔄 リセット</button>
+                <button id="timerStartBtn" class="btn btn-primary">
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 70 L30 30 M40 70 L40 20 M50 70 L50 15 M60 70 L60 20 M70 70 L70 30 M20 70 Q50 75 80 70" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    スタート
+                </button>
+                <button id="timerStopBtn" class="btn btn-danger" disabled>
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="4" fill="none"/>
+                        <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="4"/>
+                        <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="4"/>
+                    </svg>
+                    ストップ
+                </button>
+                <button id="timerResetBtn" class="btn btn-secondary">
+                    <svg class="hand-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50 20 Q80 20 80 50 Q80 80 50 80 Q30 80 20 65" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round"/>
+                        <path d="M35 50 L50 35 L50 50" fill="currentColor"/>
+                    </svg>
+                    リセット
+                </button>
             </div>
         </div>
     </div>
