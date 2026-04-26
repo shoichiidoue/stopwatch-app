@@ -44,15 +44,18 @@ function resetTimer() {
     isRunning = false;
     lapCount = 0;
     lapList.innerHTML = '';
-    updateDisplay();
+    displayTime(0);
     startBtn.disabled = false;
     stopBtn.disabled = true;
 }
 
 function updateDisplay() {
     elapsedTime = Date.now() - startTime;
+    displayTime(elapsedTime);
+}
 
-    const totalMilliseconds = Math.floor(elapsedTime);
+function displayTime(ms) {
+    const totalMilliseconds = Math.floor(ms);
     const hours = Math.floor(totalMilliseconds / 3600000);
     const minutes = Math.floor((totalMilliseconds % 3600000) / 60000);
     const seconds = Math.floor((totalMilliseconds % 60000) / 1000);
