@@ -8,11 +8,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>⏱️ Time Master</h1>
+        <div class="header">
+            <div class="hand-gesture-left">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="8" fill="currentColor"/>
+                    <circle cx="30" cy="50" r="8" fill="currentColor"/>
+                    <circle cx="30" cy="70" r="8" fill="currentColor"/>
+                    <circle cx="50" cy="20" r="8" fill="currentColor"/>
+                    <circle cx="50" cy="80" r="8" fill="currentColor"/>
+                    <path d="M30 30 L30 50 L30 70 M50 20 L50 80 M30 50 L50 20 L50 80" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+            <h1>🖐️ Time Master 🖐️</h1>
+            <div class="hand-gesture-right">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="70" cy="30" r="8" fill="currentColor"/>
+                    <circle cx="70" cy="50" r="8" fill="currentColor"/>
+                    <circle cx="70" cy="70" r="8" fill="currentColor"/>
+                    <circle cx="50" cy="20" r="8" fill="currentColor"/>
+                    <circle cx="50" cy="80" r="8" fill="currentColor"/>
+                    <path d="M70 30 L70 50 L70 70 M50 20 L50 80 M70 50 L50 20 L50 80" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+            </div>
+        </div>
 
         <div class="tabs">
-            <button class="tab-btn active" data-tab="stopwatch">ストップウォッチ</button>
-            <button class="tab-btn" data-tab="timer">タイマー</button>
+            <button class="tab-btn active" data-tab="stopwatch">
+                <svg class="tab-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+                    <path d="M12 7 V12 L15 15" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+                ストップウォッチ
+            </button>
+            <button class="tab-btn" data-tab="timer">
+                <svg class="tab-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 2h12M9 4h6M4 6h16v12c0 2-2 4-4 4H8c-2 0-4-2-4-4V6Z" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                    <circle cx="12" cy="14" r="5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                タイマー
+            </button>
         </div>
 
         <!-- ストップウォッチ -->
@@ -44,7 +78,19 @@
                 </button>
             </div>
             <div class="laps">
-                <h2>📋 ラップタイム</h2>
+                <div class="laps-header">
+                    <svg class="section-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 30 L30 40 L50 20 M70 50 L80 40 L100 60" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="70" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <circle cx="80" cy="70" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                    <h2>📋 ラップタイム</h2>
+                    <svg class="section-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M20 50 L30 40 L50 60 M70 30 L80 40 L100 20" stroke="currentColor" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="70" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                        <circle cx="80" cy="70" r="12" stroke="currentColor" stroke-width="3" fill="none"/>
+                    </svg>
+                </div>
                 <ul id="lapList"></ul>
             </div>
         </div>
@@ -53,14 +99,26 @@
         <div id="timer" class="tab-content">
             <div class="timer-input">
                 <div class="input-group">
+                    <svg class="input-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M12 6v6M12 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                     <label>時間</label>
                     <input type="number" id="timerHours" min="0" max="23" value="0">
                 </div>
                 <div class="input-group">
+                    <svg class="input-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M12 8v4M12 12h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                     <label>分</label>
                     <input type="number" id="timerMinutes" min="0" max="59" value="1">
                 </div>
                 <div class="input-group">
+                    <svg class="input-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2" fill="none"/>
+                        <path d="M12 10v2M12 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                     <label>秒</label>
                     <input type="number" id="timerSeconds" min="0" max="59" value="0">
                 </div>
