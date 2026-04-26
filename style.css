@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.display {
+    font-size: 60px;
+    font-weight: bold;
+    color: #667eea;
+    margin: 30px 0;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 5px;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+.btn {
+    padding: 12px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-start {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.btn-start:hover:not(:disabled) {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.btn-stop {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-stop:hover:not(:disabled) {
+    background-color: #da190b;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background-color: #2196F3;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #0b7dda;
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.laps {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.laps h2 {
+    color: #333;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+#lapList li {
+    padding: 10px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+}
+
+#lapList li:last-child {
+    border-bottom: none;
+}
