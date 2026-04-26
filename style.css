@@ -5,84 +5,138 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .container {
-    background: white;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
     padding: 40px;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
     color: #333;
     margin-bottom: 30px;
     font-size: 32px;
+    text-align: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    background: #f0f0f0;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    background: transparent;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.tab-btn.active {
+    background: white;
+    color: #667eea;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn:hover {
+    color: #667eea;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
 }
 
 .display {
-    font-size: 60px;
+    font-size: 56px;
     font-weight: bold;
     color: #667eea;
-    margin: 30px 0;
+    margin: 40px 0;
+    text-align: center;
     font-family: 'Courier New', monospace;
-    letter-spacing: 5px;
+    letter-spacing: 8px;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+    border-radius: 20px;
+    border: 2px solid rgba(102, 126, 234, 0.2);
 }
 
 .buttons {
     display: flex;
-    gap: 15px;
+    gap: 12px;
     margin: 30px 0;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
-    padding: 12px 30px;
-    font-size: 16px;
+    padding: 14px 28px;
+    font-size: 14px;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
-    font-weight: bold;
+    font-weight: 600;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-.btn-start {
-    background-color: #4CAF50;
+.btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
 }
 
-.btn-start:hover:not(:disabled) {
-    background-color: #45a049;
+.btn-primary:hover:not(:disabled) {
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
-.btn-stop {
-    background-color: #f44336;
+.btn-danger {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
     color: white;
 }
 
-.btn-stop:hover:not(:disabled) {
-    background-color: #da190b;
+.btn-danger:hover:not(:disabled) {
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(245, 87, 108, 0.4);
 }
 
-.btn-reset {
-    background-color: #2196F3;
+.btn-secondary {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
     color: white;
 }
 
-.btn-reset:hover {
-    background-color: #0b7dda;
+.btn-secondary:hover:not(:disabled) {
     transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(79, 172, 254, 0.4);
 }
 
 .btn:disabled {
@@ -92,13 +146,15 @@ h1 {
 
 .laps {
     margin-top: 40px;
-    text-align: left;
 }
 
 .laps h2 {
     color: #333;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 #lapList {
@@ -106,18 +162,131 @@ h1 {
     max-height: 200px;
     overflow-y: auto;
     border: 1px solid #eee;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 0;
 }
 
 #lapList li {
-    padding: 10px;
-    border-bottom: 1px solid #f0f0f0;
+    padding: 12px 16px;
+    border-bottom: 1px solid #f5f5f5;
     display: flex;
     justify-content: space-between;
     color: #666;
+    font-family: 'Courier New', monospace;
+    background: rgba(102, 126, 234, 0.02);
+    transition: all 0.3s ease;
+}
+
+#lapList li:hover {
+    background: rgba(102, 126, 234, 0.08);
 }
 
 #lapList li:last-child {
     border-bottom: none;
+}
+
+/* タイマー入力 */
+.timer-input {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.input-group label {
+    font-size: 12px;
+    color: #999;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.input-group input {
+    width: 70px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid rgba(102, 126, 234, 0.2);
+    border-radius: 12px;
+    background: white;
+    color: #333;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 10px rgba(102, 126, 234, 0.3);
+}
+
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* スクロールバーのカスタマイズ */
+#lapList::-webkit-scrollbar {
+    width: 6px;
+}
+
+#lapList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#lapList::-webkit-scrollbar-thumb {
+    background: #667eea;
+    border-radius: 10px;
+}
+
+#lapList::-webkit-scrollbar-thumb:hover {
+    background: #764ba2;
+}
+
+/* レスポンシブ */
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .display {
+        font-size: 40px;
+        letter-spacing: 4px;
+        margin: 30px 0;
+    }
+
+    .buttons {
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 12px;
+    }
+
+    .timer-input {
+        gap: 10px;
+    }
+
+    .input-group input {
+        width: 60px;
+        font-size: 16px;
+    }
 }
