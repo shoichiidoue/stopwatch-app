@@ -115,17 +115,19 @@ h1 {
 }
 
 .display {
-    font-size: 56px;
+    font-size: 48px;
     font-weight: bold;
     color: #667eea;
     margin: 40px 0;
     text-align: center;
     font-family: 'Courier New', monospace;
-    letter-spacing: 8px;
-    padding: 20px;
+    letter-spacing: 2px;
+    padding: 20px 15px;
     background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
     border-radius: 20px;
     border: 2px solid rgba(102, 126, 234, 0.2);
+    word-spacing: 5px;
+    overflow-x: auto;
 }
 
 .buttons {
